@@ -1,0 +1,104 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.9",
+	"appid": "wxd73abc47832e3958",
+	"projectname": "%E5%AD%A6%E4%B9%A0%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 10,
+			"list": [
+				{
+					"id": -1,
+					"name": "scan",
+					"pathName": "pages/scan/scan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "msg",
+					"pathName": "pages/msg/msg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "placeorder",
+					"pathName": "pages/placeorder/placeorder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "orderdetail",
+					"pathName": "pages/orderdetail/orderdetail",
+					"query": "order_id=15315449344409"
+				},
+				{
+					"id": 8,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "suid=1861737699&business=2&bid=200106&brid=20113&sid=21568&tid=103"
+				},
+				{
+					"id": -1,
+					"name": "waiting",
+					"pathName": "pages/waiting/waiting",
+					"query": "order_id=121212121212"
+				},
+				{
+					"id": 9,
+					"name": "shopList",
+					"pathName": "pages/shopList/shopList",
+					"query": "business_id='1234'"
+				},
+				{
+					"id": -1,
+					"name": "booking",
+					"pathName": "pages/booking/booking",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "pay",
+					"pathName": "pages/pay/pay",
+					"query": "order_id=123456789"
+				}
+			]
+		}
+	}
+}

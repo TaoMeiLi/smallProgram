@@ -1,0 +1,12 @@
+var suggestKinds = function (data) {
+  if (data) {
+    return data.filter(function(_f) {
+      return _f['suggest'] != 1;
+    })
+  }
+  
+  return data;
+}
+module.exports = {
+  kinds: suggestKinds
+}

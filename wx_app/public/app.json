@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#fafafa",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#FF6D5B",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "微信小程序",
+    "navigationStyle": "default"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
