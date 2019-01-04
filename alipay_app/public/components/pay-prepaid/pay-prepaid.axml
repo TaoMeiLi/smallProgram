@@ -1,0 +1,57 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<view class="pay-prepaid-component {{vipPrice && chargeStatus == 3 ? 'component-padding' : ''}}">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">
+      <view class="title {{chargeStatus == 3 ? 'recommend' : 'norecommend'}} {{chargeStatus == 3 && phoneSystemType == 'IOS' ? '' : 'recommendAndroid' }}">        {{locale.pay.costCard}}        
+        <view class="balance_pay_text" a:if="{{chargeStatus != 3 && isCheckedCharge }}"> {{locale.pay.charge_tip_begin}} {{locale.pay.balance_pay_text}}
+          <text class="balance_pay_val">{{locale.pay.currency}}{{limit_decimal.show(costCardMoney, 2)}} 
+          </text>{{locale.pay.charge_tip_close}}
+        </view>
+      </view>
+      <block a:if="{{chargeStatus == 3 && balanceNotPay && vipPrice}}">
+        <view class="charge-rule" a:if="{{vipPrice != payAmount}}">储值{{limit_decimal.getParseInt(total*multiple-cardBalance)}}元即可享受会员价{{limit_decimal.show(vipPrice, 2)}}元{{copywriting.length ? '，' : ''}}{{copywriting}}
+        </view>
+      </block>
+      <block a:elif="{{vipPrice && chargeStatus == 3}}">
+        <view class="vip-price" a:if="{{vipPrice != payAmount}}">{{locale.pay.vip_price}}{{limit_decimal.show(vipPrice, 2)}}
+        </view>
+      </block>
+      <!-- <view class="charge-rule">{{previewRulesText}}</view> -->
+    </view>
+    <view class="weui-cell__ft">
+      <!-- <text a:if="{{isChecked}}" class="cost-card-money">- {{locale.pay.currency}}{{limit_decimal.show(costCardMoney, 2)}}</text> -->
+      <block a:if="{{chargeStatus != 3}}">
+        <view class="select-prepaid" onTap="selectPrepaid">
+          <icon class="radio {{isChecked ? 'selected' : ''}}">
+          </icon>
+        </view>
+      </block>
+      <block a:else>
+        <view class="select-prepaid" a:if="{{!balanceNotPay}}" onTap="selectPrepaid">
+          <icon class="radio {{isChecked ? 'selected' : ''}}">
+          </icon>
+        </view>
+        <view class="go-charge" a:else>
+          <view a:if="{{openCharge || chargeStatus == 3}}" data-chargeStatus="3" onTap="_showRuleModal" class="charge-btn">{{locale.pay.btn_goCharge}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<modal a:if="{{showRuleModal}}" onCloseModalEvent="_showRuleModal">
+  <charge-rule 
+    chargeRules="{{chargeRules}}" 
+    chargeStatus="{{chargeStatus}}" 
+    rechargeMoney="{{limit_decimal.getParseInt(total*multiple-cardBalance)}}" 
+    onShowRuleModal="_showRuleModal" 
+    onGoCharge="_goCharge" />
+</modal>
+<view class="go_charge_btn2" a:if="{{chargeRules.length && balanceNotPay && chargeStatus ==1 }}">
+  <view class="charge-rule">{{previewRulesText}}
+  </view>
+  <view class="go-charge">
+    <view data-chargeStatus="1" onTap="_showRuleModal" class="charge-btn">{{locale.pay.btn_goCharge}}
+    </view>
+  </view>
+</view>

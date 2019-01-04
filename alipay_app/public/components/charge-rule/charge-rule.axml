@@ -1,0 +1,40 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<view class="charge-rule-component  {{chargeRules.length > 4 ? 'max_height' : ''}} {{chargeStatus == 3 ? 'recommended-component' : ''}}">
+  <view class="header">
+    <text class="title">{{chargeStatus == 3 ? '充值金额' : locale.chargeModalTitle}}
+    </text>
+    <view onTap="_close" class="close_btn">
+    </view>
+  </view>
+  <view class="charge-content" a:if="{{chargeStatus == 3}}">
+    <view>{{locale.currency}}
+      <text>{{rechargeMoney}}
+      </text>
+    </view>
+  </view>
+  <view class="rule-items" a:else>
+    <block a:for="{{chargeRules}}" a:key="{{item.charge_id}}">
+      <view class="item {{item.isChecked ? 'active' : ''}}" data-item="{{item}}" onTap="onCheckRule">
+        <view class="item-top">					{{locale.currency}}
+          <text class="top-money">{{item.rechargeAmount/100}}
+          </text>
+          <text class="top-money-give" a:if="{{item.giveMoney || item.giveCouponMoney || item.giveCredit}}">{{item.rulesText1}}
+          </text>
+        </view>
+        <view class="item-give">
+          <text>{{item.rulesText2}}
+          </text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="footer">
+    <!-- data-status: 1:充值，2:充值并支付 -->
+    <button class="btn_goCharge" onTap="goCharge" data-status="1">{{locale.btn_goChargeNow}}
+    </button>
+    <form bindsubmit="goCharge" report-submit="{{true}}" data-status="2">
+      <button class="btn_goChargeAndPay" formType="submit">充值并支付订单
+      </button>
+    </form>
+  </view>
+</view>

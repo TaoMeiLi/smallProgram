@@ -1,0 +1,106 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<view class="pay-pags {{cards.length == 0 ? 'nocard' : ''}}">
+  <!-- 会员卡 -->
+  <pay-card 
+    data="{{cards}}" 
+    money="{{money}}" 
+    vipPrice="{{vipPrice}}" 
+    a:if="{{cards.length && memberPay}}" 
+    onChangeCard="_changeCard"/>
+
+  <!--优惠券  -->
+  <pay-coupon 
+    payData="{{payData}}" 
+    data="{{coupons}}" 
+    money="{{money}}" 
+    dishes="{{dishes}}" 
+    onConfirmCoupon="_confirmCoupon" 
+    a:if="{{coupons.length && memberPay}}"/>
+
+  <!--积分  -->
+  <pay-credit 
+    onBseCredit="_useCredit" 
+    payMoney="{{vipPriceMoney - discountMoney}}" 
+    data="{{credit}}" 
+    couponsLength="{{coupons.length}}" 
+    a:if="{{useCredit && credit && credit.total && memberPay}}"/>
+
+  <!-- 分割线-->
+  <block a:if="{{memberPay}}">
+    <view class="cutting-line" a:if="{{(useCredit && credit && credit.total) || coupons.length}}">
+    </view>
+  </block>
+
+  <!-- 储值 -->
+  <pay-prepaid 
+    onUsePrepaidCard="_usePrepaidCard" 
+    payAmount="{{money}}" 
+    money="{{vipPriceMoney}}" 
+    payMoney="{{useMoney}}" 
+    cardBalance="{{cardBalance}}" 
+    cid="{{currentCard.cid}}" 
+    openCharge="{{openCharge}}" 
+    chargeStatus="{{chargeStatus}}" 
+    copywriting="{{copywriting}}" 
+    multiple="{{multiple}}" 
+    openPayMethod="{{payData.openPayMethod}}" 
+    chargeRules="{{chargeRules}}" 
+    orderId="{{orderId}}" 
+    vipPrice="{{vipPrice}}" 
+    useAll="{{useAll}}" 
+    isCheckedCharge="{{isCheckedCharge}}" 
+    isCheckedWx="{{isCheckedWx}}" 
+    balanceNotPay="{{balanceNotPay}}" 
+    total="{{total}}" 
+    onAliPay="aliPay" 
+    onUpDataisChecked="_upDataisChecked" 
+    a:if="{{cards.length && memberPay}}"/>
+
+  <!-- 支付宝支付 -->
+  <pay-ali 
+    onUseWx="_useWx" 
+    money="{{money}}" 
+    costCardMoney="{{costCardMoney}}" 
+    payMoney="{{wxUseMoney}}" 
+    balanceNotPay="{{balanceNotPay}}" 
+    isCheckedCharge="{{isCheckedCharge}}" 
+    isCheckedWx="{{isCheckedWx}}" 
+    chargeStatus="{{chargeStatus}}" 
+    vipPrice="{{vipPrice}}" 
+    memberPay="{{memberPay}}" 
+    onUpDataisChecked="_upDataisChecked" 
+    a:if="{{chargeStatus}}"/>
+
+  <!--操作  -->
+  <view class="paybtn">
+    <view class="info_pay">
+      <view class="info-money {{ordermode == 3 && multipleModel == 1 && source == 3 ? 'info-money2' : ''}}">
+        <view class="pay_money total_block">
+          <text class="total_label">{{locale.pay.label_total}}
+          </text>
+          <text class="total_money ">{{locale.pay.currency}}
+            <text class="money-mark">{{limit_decimal.show(useMoney, 2, 'any')}}
+            </text>
+          </text>
+        </view>
+        <text a:if="{{useMoney != money}}" class="total_original total_block">{{locale.pay.currency}}{{limit_decimal.show(money, 2, 'any')}}
+        </text>
+      </view>
+      <view class="info_time" a:if="{{timeto}}">
+        <CountDown timeto="{{timeto}}" class-name="write" onFinish="finish" />
+      </view>
+    </view>
+    <!--  -->
+    <view class="cancel_pay" a:if="{{ordermode == 3 && multipleModel == 1 && source == 3}}" onTap="_cancelPay">
+      <text class="btn">取消支付
+      </text>
+    </view>
+    <view class="pay_btn">
+      <form onSubmit="_topay" report-submit="{{true}}">
+        <button class="btn" formType="submit" disabled="{{isPay}}">          {{paybtn}}        
+        </button>
+      </form>
+    </view>
+  </view>
+
+</view>

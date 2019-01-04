@@ -1,0 +1,251 @@
+@import '/_global.less';
+page {
+    background: #F7F7F7;
+}
+.orderdetail-page {
+    .order-dishes {
+        padding: 20rpx 40rpx;
+        background: #fff;
+    }
+    .ordermsg {
+        margin-top: 10rpx;
+        padding: 20rpx 40rpx;
+        background: #fff;
+        font-size: 28rpx;
+        .msg-item {
+            display: flex;
+            align-items: center;
+            padding: 10rpx 0rpx;
+            .title {
+                flex: 1;
+                color: #2B2B2B;
+            }
+            .val {
+                flex: 1;
+                color: #5A5A5A;
+                text-align: right;
+            }
+            .red{
+                color: rgba(253,75,59,1);
+            }
+        }
+        .price{
+            .title {
+                font-size: 30rpx;
+                font-weight: 800;
+            }
+            .val {
+                font-weight: 800;
+                font-size: 36rpx;
+            }
+        }
+    }
+    .total_price{
+        background-color: @backColor;
+        height: 99rpx;
+        line-height: 99rpx;
+        padding: 0 40rpx;
+        display: flex;
+        margin-top: 12rpx;
+        .left{
+            flex: 1;
+            font-size: 28rpx;
+            color: #2B2B2B;
+        }
+        .right{
+            flex: 1;
+            font-size: 28rpx;
+            text-align: right;
+            color: #5A5A5A;
+            .cur{
+                //color: rgba(253,75,59,1);
+            }
+        }
+    }
+    .border_bottom{
+        border-bottom: 108rpx solid rgba(247,247,247,1);
+    }
+    .fixed_bottom{
+		button::after {
+			border: none;
+		}
+		
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        height: 106rpx;
+        line-height: 106rpx;
+        background-color: @backColor;
+        text-align: right;
+        border-top: 1rpx solid @listborderColor;
+        .invoice {
+            font-size: 30rpx;
+            border-radius: @btnRadius;
+            border: none;
+            color: rgba(253,81,61,1);
+            margin-top: 20rpx;
+            display: inline-block;
+            margin-right: 30rpx;
+            height: 64rpx;
+            line-height: 64rpx;
+            background: #fff;
+            border: 1rpx solid rgba(253,81,61,1);
+            min-width: 150rpx;
+        }
+        .hidden{
+            display: none;
+        }
+        .pay {
+            font-size: 30rpx;
+            border-radius: @btnRadius;
+            border: none;
+            color: @backColor;
+            margin-top: 20rpx;
+            display: inline-block;
+            margin-right: 30rpx;
+            height: 66rpx;
+            line-height: 66rpx;
+            background: linear-gradient(to right, rgba(253,75,59,1), rgba(253,109,66,1));
+        }
+    }
+
+    .show_more {
+        height: 106rpx;
+        background: #fff;
+        margin: 12rpx 0rpx;
+        color: #545454;
+        font-size: 28rpx;
+        display: flex;
+        align-items: center;
+        .con {
+            flex: 1;
+            text-align: center;
+            .icon {
+                margin: auto;
+                height: 13rpx;
+                width: 27rpx;
+                margin-top: 7rpx;
+                background: url('@{img}orderinfo_more.svg') no-repeat 50% 50%;
+                background-size: contain;
+                
+            }
+        }
+        .nomore {
+            .icon {
+                margin-bottom: 7rpx;
+                transform: rotate(180deg);
+            }
+        }
+        
+    }
+}
+.orderdetail-takefoodcode-component {
+    padding: 30rpx 0 30rpx 38rpx;
+    background: #fff;
+    margin-bottom: 10rpx;
+    .box {
+        width: 680rpx;
+        height: 220rpx;
+        background-color: #fff;
+        border: 2rpx solid #E1E1E1;
+        box-shadow: 0 2rpx 8rpx 0 rgba(220,220,220,0.50);
+        border-radius: 8rpx;
+        position: relative;
+        
+
+        &:after {
+            position: absolute;
+            z-index: 2;
+            content: '';
+            bottom: -11rpx;
+            left: 4rpx;
+            width:674rpx;
+            height: 20rpx;
+            background: url('@{img}lace_bg.png') 0 0 repeat;
+            background-size: 34rpx 20rpx;
+        }
+        .takefoodcode, .takefoodtip {
+            padding-left: 30rpx;
+        }
+        .takefoodcode {
+            height: 148rpx;
+            border-bottom: 2rpx dashed #D7D7D7;
+            font-family: PingFangSC-Regular;
+            font-size: 28rpx;
+            color: #999999;
+            letter-spacing: 1.29rpx;
+            display:flex;
+            flex-direction: row;
+            text {
+                line-height: 148rpx;
+            }
+            .code {
+                padding-left: 38rpx;
+                font-family: DINAlternate-Bold;
+                font-size: 48rpx;
+                color: #FF4C2E;
+                letter-spacing: 0;
+            }
+        }
+        .takefoodtip {
+            font-family: PingFangSC-Regular;
+            font-size: 22rpx;
+            color: #999999;
+            line-height: 64rpx;
+            position: relative;
+
+            // &:after {
+            //     position: absolute;
+            //     content: '';
+            //     top: 13rpx;
+            //     left: 13rpx;
+            //     width: 26rpx;
+            //     height: 26rpx;
+            //     border: 2rpx solid #E1E1E1;
+            //     border-radius: 50%;
+            // }
+        }
+
+    }
+}
+.orderdetail-status-component {
+    padding: 40rpx 40rpx 30rpx 40rpx;
+    background: #fff;
+    margin-bottom: 10rpx;
+    .msglist {
+        //padding-left: 40rpx;
+        .msg {
+            display: flex;
+            .title {
+                color: #000;
+                width: 114rpx;
+                text-align: justify;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 28rpx;
+                line-height: 28rpx;
+                  &:after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                    overflow: hidden;
+                    height: 0;
+                  }
+                          //text-align-last:justify方式，比较简单，但是兼容性不行
+            }
+            .val {
+                flex: 1;
+                display: inline-block;
+                line-height: 30rpx;
+                vertical-align: top;
+                color: #5A5A5A;
+                font-size: 28rpx;
+                padding-left: 30rpx;
+            }
+            .ordermemo{
+                line-height: 28rpx;
+                letter-spacing:2rpx
+            }
+        }
+    }
+}

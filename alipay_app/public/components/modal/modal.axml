@@ -1,0 +1,11 @@
+<view class="modal">
+  <view class="shade" onTap='_closeModalEvent'>
+  </view>
+  <view class="modal-con">
+    <view class="modal-con-con">
+      <slot>
+        <view></view>
+      </slot>
+    </view>
+  </view>
+</view>

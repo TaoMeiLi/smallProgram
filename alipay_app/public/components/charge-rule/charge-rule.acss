@@ -1,0 +1,153 @@
+/*由 src/less/components/charge-rule/charge-rule.less 生成，请勿手动修改以免被覆盖！*/
+.charge-rule-component {
+  width: 100%;
+  height: 748rpx;
+  background-color: #FFFFFF;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+  box-sizing: border-box;
+  padding: 0 44rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.charge-rule-component .header {
+  padding: 30rpx 32rpx;
+  position: relative;
+  text-align: center;
+}
+.charge-rule-component .header .title {
+  font-size: 34rpx;
+  color: #282828;
+  letter-spacing: 0;
+  line-height: 48rpx;
+}
+.charge-rule-component .header .close_btn {
+  position: absolute;
+  right: -20rpx;
+  top: 20rpx;
+  display: inline-block;
+  width: 56rpx;
+  height: 56rpx;
+  background: url('assets/cancel.svg') no-repeat center;
+  background-size: 50%;
+}
+.charge-rule-component .rule-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-height: 450rpx;
+  overflow-y: auto;
+  padding-bottom: 24rpx;
+}
+.charge-rule-component .rule-items .item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 320rpx;
+  height: 185rpx;
+  background-color: #FFFFFF;
+  border: 2rpx solid #E7E7E7;
+  border-radius: 6rpx;
+  margin-bottom: 22rpx;
+  padding: 24rpx 21rpx 0 30rpx;
+  background-image: url('assets/img_normal.svg');
+  background-repeat: no-repeat;
+  background-size: 126rpx 128rpx;
+  background-position: right bottom;
+}
+.charge-rule-component .rule-items .item .item-top {
+  font-family: DINAlternate-Bold;
+  font-size: 24rpx;
+  color: #282828;
+  letter-spacing: 0;
+}
+.charge-rule-component .rule-items .item .item-top .top-money {
+  font-size: 60rpx;
+  line-height: 70rpx;
+  margin-left: -2rpx;
+}
+.charge-rule-component .rule-items .item .item-top .top-money-give {
+  font-family: PingFangSC-Semibold;
+  margin-left: 9rpx;
+}
+.charge-rule-component .rule-items .item .item-give {
+  font-family: PingFangSC-Regular;
+  margin-left: 5rpx;
+  height: 56rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.charge-rule-component .rule-items .item .item-give text {
+  font-size: 20rpx;
+  color: #A7A7A7;
+  font-weight: 200;
+  line-height: 28rpx;
+}
+.charge-rule-component .rule-items .active {
+  border-color: #FFE0A2;
+  background-color: #FFFCF6;
+  background-image: url('assets/img_selected.svg');
+}
+.charge-rule-component .rule-items .active .item-top {
+  color: #FA5326;
+}
+.charge-rule-component .rule-items .active .item-give {
+  color: #C19B53;
+}
+.charge-rule-component .footer {
+  width: 100%;
+  position: absolute;
+  padding: 20rpx 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+}
+.charge-rule-component .footer .btn_goCharge,
+.charge-rule-component .footer .btn_goChargeAndPay {
+  padding: 0;
+  width: 670rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-image: linear-gradient(90deg, #FD4B3B 0%, #FD6D42 94%);
+  border-radius: 45rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  text-align: center;
+  margin: auto;
+}
+.charge-rule-component .footer .btn_goCharge {
+  background: #FFFFFF;
+  color: #FD543D;
+  border: 2rpx solid #FD543D;
+  margin-bottom: 14rpx;
+}
+.max_height {
+  height: 947rpx;
+}
+.max_height .rule-items {
+  min-height: 610rpx;
+}
+.recommended-component {
+  height: 570rpx;
+}
+.recommended-component .charge-content {
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.recommended-component .charge-content view {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  color: #282828;
+}
+.recommended-component .charge-content view text {
+  font-family: DINAlternate-Bold;
+  font-size: 60rpx;
+  color: #000000;
+}

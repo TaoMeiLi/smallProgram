@@ -1,0 +1,101 @@
+@import '/_global.less';
+
+.pay-ali-component {
+  background-color: #FFF;
+  padding: 0 30rpx;
+    .weui-cell {
+        height: 110rpx;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .weui-cell_switch {
+      border-top: 2rpx solid #E5E5E5;
+        .weui-cell__bd {
+            font-size: 28rpx;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: 55rpx;
+            height: 110rpx;
+            justify-content: center;
+
+            &:after {
+              position: absolute;
+              content: "";
+              left:0;
+              top:36rpx;
+              width: 40rpx;
+              height: 40rpx;
+              background: url('@{img}icon_item_wechat.svg') no-repeat center;
+              background-size: 100%;
+            }
+            .title {
+              width: 150rpx;
+              font-size: 28rpx;
+              color: #282828;
+              line-height: 40rpx;
+                
+            }
+            .recommend{
+
+            }
+            .norecommend {
+              width: 100%;
+              .need_pay_text {
+                display: inline;
+                color: #9F9F9F;
+                font-size: 24rpx;
+                .need_pay_val {
+                    font-style: none;
+                    color: #FF6021;
+                }
+              }
+                  
+            }
+            .wx-price {
+              display: inline-block;
+              font-size: 24rpx;
+              color: #A7A7A7;
+              letter-spacing: 0;
+              line-height: 32rpx;
+              font-family: PingFangSC-Regular;
+                
+            }
+        }
+        .weui-cell__ft {
+            height: 100%;
+            width:130rpx;
+            position: relative;
+            
+            .radio {
+                position: absolute;
+                top:30rpx;
+                right:0;
+                width:38rpx;
+                height:38rpx;
+                border:1rpx solid #C9C9C9;
+                border-radius:50%;
+            }
+            .selected {
+                border:1rpx solid #08B906;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background: url('@{img}ok_icon.svg') no-repeat 50% 50%;
+                    width: 20rpx;
+                    height: 14rpx;
+                    background-size: contain;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                }
+            }
+            
+           
+        }
+    
+    }
+    
+}

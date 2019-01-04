@@ -1,0 +1,87 @@
+/*由 src/less/components/pay-ali/pay-ali.less 生成，请勿手动修改以免被覆盖！*/
+.pay-ali-component {
+  background-color: #FFF;
+  padding: 0 30rpx;
+}
+.pay-ali-component .weui-cell {
+  height: 110rpx;
+  box-sizing: border-box;
+  padding: 0;
+}
+.pay-ali-component .weui-cell_switch {
+  border-top: 2rpx solid #E5E5E5;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd {
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 55rpx;
+  height: 110rpx;
+  justify-content: center;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 36rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: url('assets/icon_item_wechat.svg') no-repeat center;
+  background-size: 100%;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd .title {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #282828;
+  line-height: 40rpx;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd .norecommend {
+  width: 100%;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd .norecommend .need_pay_text {
+  display: inline;
+  color: #9F9F9F;
+  font-size: 24rpx;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd .norecommend .need_pay_text .need_pay_val {
+  font-style: none;
+  color: #FF6021;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__bd .wx-price {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #A7A7A7;
+  letter-spacing: 0;
+  line-height: 32rpx;
+  font-family: PingFangSC-Regular;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__ft {
+  height: 100%;
+  width: 130rpx;
+  position: relative;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__ft .radio {
+  position: absolute;
+  top: 30rpx;
+  right: 0;
+  width: 38rpx;
+  height: 38rpx;
+  border: 1rpx solid #C9C9C9;
+  border-radius: 50%;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__ft .selected {
+  border: 1rpx solid #08B906;
+}
+.pay-ali-component .weui-cell_switch .weui-cell__ft .selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url('assets/ok_icon.svg') no-repeat 50% 50%;
+  width: 20rpx;
+  height: 14rpx;
+  background-size: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

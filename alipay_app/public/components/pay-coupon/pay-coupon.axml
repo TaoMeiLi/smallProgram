@@ -1,0 +1,67 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<!-- 优惠券组件  -->
+<view class="pay-coupon-component">
+  <!-- 几张卷可用  -->
+  <view>
+    <view class="weui-cell" a:if="{{data.length}}">
+      <view class="weui-cell__bd">
+        <view class="title">
+          <text>{{locale.pay.coupon}}</text>
+          <text class="coupon-num" a:if="{{!isChecked}}">{{hasCouponsTip}}
+          </text>
+        </view>
+      </view>
+      <view class="weui-cell__ft coupon-onOff">
+        <switch color="#FD4E3C" onChange="switchChange" checked='{{isChecked}}'/>
+      </view>
+    </view>
+    <view class="show-coupon" onTap='showCoupon' a:if="{{isChecked}}">
+      <view class="coupon-cell-l">        {{locale.pay.use_coupon}}        
+        <text a:if="{{isConfirm && maxCoupons == comfirmDiscountMoney}}">{{locale.pay.max_coupon_tip}}
+        </text>
+      </view>
+      <view class="coupon-cell-ft {{isConfirm ? 'discount' : ''}}">          {{!isConfirm ? hasCoupons : discountMoney}}      
+      </view>
+    </view>
+  </view>
+  <!-- 优惠券选择窗口  -->
+  <modal a:if="{{showCouponModal}}" onCloseModalEvent="confirmCoupons">
+    <view class="coupon-modal">
+      <view class="modal-title">
+        <text>{{locale.pay.coupon_title}}
+        </text>
+        <view class="close_btn" onTap="_close" ></view>
+      </view>
+      <!-- 优惠券列表  -->
+      <scroll-view scroll-y="{{true}}" scroll-top="{{scrollPos}}" onScrolltolower="{{reachBottom}}" class="content">
+        <block a:for="{{coupons}}" a:key="{{item.id}}">
+          <view class="coupon-item {{item.disabled ? 'coupon-disabled' : ''}}" onTap='selectCoupon' data-coupon="{{item}}">
+            <!-- 优惠券图标  -->
+            <view class="item-lf">
+              <view class="coupon_img {{item.bg}} {{item.icon ? item.icon : ''}} {{item.disabled ? 'disabled_icon' : ''}}">
+                <text class="currency" a:if="{{item.type == 1}}">{{locale.pay.currency}}
+                </text>
+                <text a:if="{{item.type == 1}}">{{limit_decimal.show(item.money, 0)}}
+                </text>
+              </view>
+            </view>
+            <!-- 优惠券信息  -->
+            <view class="item-rt">
+              <text class="title">{{item.title}}
+              </text>
+              <text class="date">{{item.dateMsg}}
+              </text>
+            </view>
+            <!-- 选中状态  -->
+            <icon class="radio {{item.selected ? 'selected' : ''}}"/>
+          </view>
+        </block>
+      </scroll-view>
+      <!--确定  -->
+      <view class="btns">
+        <button class="okbtn" onTap='confirmCoupons'>         {{locale.pay.coupon_okbtn}}        
+        </button>
+      </view>
+    </view>
+  </modal>
+</view>

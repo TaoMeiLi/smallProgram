@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/scan/scan",
+    "pages/order/order",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

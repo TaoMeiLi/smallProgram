@@ -1,0 +1,33 @@
+/*由 src/less/components/pay-credit/pay-credit.less 生成，请勿手动修改以免被覆盖！*/
+.pay-credit-component {
+  padding: 0 30rpx;
+  background: #fff;
+}
+.pay-credit-component .weui-cell {
+  height: 110rpx;
+  box-sizing: border-box;
+  padding: 0;
+}
+.pay-credit-component .weui-cell__bd {
+  font-size: 28rpx;
+  color: #000;
+}
+.pay-credit-component .weui-cell__bd .desc {
+  font-size: 24rpx;
+  padding: 5rpx 15rpx;
+  font-family: PingFangSC-Medium;
+  color: #282828;
+}
+.pay-credit-component .weui-cell__ft .subtrack {
+  color: #FA5337;
+  display: inline-block;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  font-family: "DINAlternate-Bold";
+}
+.pay-credit-component .weui-cell__ft switch {
+  transform: scale(0.65) translate(30rpx);
+}
+.pay-credit-component .topborder {
+  border-top: 1rpx solid #E5E5E5;
+}

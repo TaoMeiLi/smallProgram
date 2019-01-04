@@ -1,0 +1,21 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<view class="pay-ali-component">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">
+      <view class="title {{chargeStatus == 3 ? 'recommend' : 'norecommend'}}">            {{locale.pay.wxpay}}            
+        <view class="need_pay_text" a:if="{{chargeStatus != 3 && isCheckedWx && memberPay}}">               
+          {{locale.pay.charge_tip_begin}} {{locale.pay.need_pay_text}}
+          <text class="need_pay_val">{{locale.pay.currency}}{{limit_decimal.show(wxMoney, 2)}} 
+          </text>{{locale.pay.charge_tip_close}}            
+        </view>
+      </view>
+      <view class="wx-price" a:if="{{chargeStatus == 3 && (vipPrice ? vipPrice != money : true) && memberPay}}"> 
+        {{locale.pay.wx_price}}{{limit_decimal.show(money, 2)}}          
+      </view>
+    </view>
+    <view class="weui-cell__ft" onTap="selectWx">
+      <icon class="radio {{isChecked ? 'selected' : ''}}">
+      </icon>
+    </view>
+  </view>
+</view>

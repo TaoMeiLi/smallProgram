@@ -1,0 +1,13 @@
+<view class="scan_page positionFix0" a:if="{{isLoading}}">
+    <view class="scan positionFix30">
+        <view class="flex_wrap">
+            <image src="{{user.avatarUrl}}" class="circle" mode="scaleToFill" lazy-load="false"></image>
+            <text class="wel">xxxxx</text>
+        </view>
+        <text class="scan_tip">{{locale.tip}}{{locale.title}}</text>
+        <icon class="scan_icon" onTap="sanCode"></icon>
+        <button class="btn btn-warn" type="warn" onTap="sanCode">
+            <block>{{locale.des}}</block>
+        </button>
+    </view>
+</view>

@@ -1,0 +1,150 @@
+/*由 src/less/pages/pay/pay.less 生成，请勿手动修改以免被覆盖！*/
+page {
+  background: #F7F6F6;
+}
+.pay-pags .paybtn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 110rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+.pay-pags .paybtn .info_pay {
+  flex: 1;
+  background-color: #474747;
+  color: #FFFFFF;
+  padding: 0 14rpx 0 24rpx;
+  line-height: 110rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pay-pags .paybtn .info_pay .info-money {
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+}
+.pay-pags .paybtn .info_pay .info-money .pay_money .total_label {
+  font-size: 30rpx;
+  margin-right: 6rpx;
+  width: 34rpx;
+}
+.pay-pags .paybtn .info_pay .info-money .pay_money .total_money {
+  font-family: DINAlternate-Bold;
+  font-size: 32rpx;
+  margin-right: 4rpx;
+  font-weight: 400;
+}
+.pay-pags .paybtn .info_pay .info-money .pay_money .total_money .money-mark {
+  font-size: 48rpx;
+  font-family: "DINAlternate-Bold";
+}
+.pay-pags .paybtn .info_pay .info-money .total_original {
+  font-size: 28rpx;
+  text-decoration: line-through;
+  color: #B2B2B2;
+}
+.pay-pags .paybtn .info_pay .info-money2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pay-pags .paybtn .info_pay .info-money2 .pay_money {
+  display: flex;
+  flex-direction: row;
+}
+.pay-pags .paybtn .info_pay .info-money2 .total_original {
+  margin-left: 70rpx;
+}
+.pay-pags .paybtn .info_pay .info-money2 .total_block {
+  display: block;
+  line-height: 32rpx;
+}
+.pay-pags .paybtn .info_pay .info_time {
+  font-size: 34rpx;
+  font-weight: 200;
+  position: relative;
+}
+.pay-pags .paybtn .info_pay .info_time:after {
+  content: "";
+  position: absolute;
+  left: -40rpx;
+  top: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background: url('assets/count_down_icon.svg') no-repeat center;
+  background-size: 100%;
+}
+.pay-pags .paybtn .pay_btn {
+  width: 200rpx;
+  height: 110rpx;
+}
+.pay-pags .paybtn .pay_btn form {
+  border-width: 0;
+  width: 100%;
+  height: 100%;
+}
+.pay-pags .paybtn .pay_btn form button {
+  height: 100%;
+  border: none;
+}
+.pay-pags .paybtn .btn {
+  background-image: linear-gradient(-90deg, #FB4E3A 0%, #FF5B29 100%);
+  font-size: 34rpx;
+  border-radius: 0;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 110rpx;
+  width: 100%;
+}
+.pay-pags .paybtn .cancel_pay {
+  width: 200rpx;
+  height: 110rpx;
+}
+.pay-pags .paybtn .cancel_pay text {
+  display: inline-block;
+  background-image: linear-gradient(90deg, #FF8028 0%, #FE7B2F 100%);
+}
+.pay-pags .cutting-line {
+  width: 100%;
+  height: 14rpx;
+  background-color: #F7F7F7;
+}
+.pay-pags .weui-cell {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.pay-pags .weui-cell .weui-cell__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.pay-pags .weui-cell .weui-cell__ft {
+  text-align: right;
+  color: #999;
+}
+.nocard {
+  height: 100vh;
+  background: #fff;
+  overflow: auto;
+}
+.testpay view {
+  margin-top: 40rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+.testpay button {
+  width: 140rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 2rpx solid #ccc;
+}

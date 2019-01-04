@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "modal": "../modal/modal",
+    "charge-rule": "../charge-rule/charge-rule"
+  }
+}

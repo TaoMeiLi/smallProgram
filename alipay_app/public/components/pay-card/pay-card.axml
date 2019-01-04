@@ -1,0 +1,25 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<view class="pay-card-component">
+  <swiper class="swiper-model" previous-margin="52px" next-margin="52px" onChange="bindchange" style='height: 276rpx'>
+    <block a:for="{{data}}" a:key="{{item.cid}}">
+      <swiper-item>
+        <view class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}">
+          <view class="card-label">{{locale.pay.card_label}}
+          </view>
+          <view class="money">
+            <text class="balance">{{locale.pay.balance}}
+            </text>            {{locale.pay.currency}}
+            <text class="num">{{limit_decimal.show(item.max_consume_money, 2)}}
+            </text>
+          </view>
+          <view class="cno">
+            <text class="pay-num">{{locale.pay.cno}}{{item.cno}}
+            </text>
+          </view>
+          <view class="balance-insufficient" a:if="{{item.max_consume_money < (vipPrice ? vipPrice : money)}}">{{locale.pay.balance_insufficient}}
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

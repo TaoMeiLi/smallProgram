@@ -1,0 +1,163 @@
+<import-sjs from="../../sjs/limit_decimal.sjs" name="limit_decimal" />
+<view class="orderdetail-page" a:if="{{!isLoading}}">
+  <!-- 订单状态  -->
+  <!-- <OrderDetailStatus 
+  info='{{orderInfo}}' 
+  locale="{{locale.orderstatus}}"
+  bind:cancelOrder="cancelOrder"/> -->
+  <view class="orderdetail-takefoodcode-component" a:if="{{orderInfo.meal_no}}">
+    <!-- 订单信息：取餐号 -->
+    <view class="box">
+      <view class="takefoodcode">
+        <text>{{locale.orderinfo.takeFoodCode}}</text>
+        <text class="code">{{orderInfo.meal_no}}</text>
+      </view>
+      <view class="takefoodtip">{{locale.orderinfo.takeFoodTip}}</view>
+    </view>
+  </view>
+  <view class="orderdetail-status-component">
+    <!--订单信息，人数，备注，就餐方式，预计到店  -->
+    <view class="msglist">
+      <view class="msg" a:if="{{!orderInfo.meal_no}}">
+        <text class="title">{{locale.orderinfo.table_no}}</text>
+        <text class="val warn">{{orderInfo.table_name}}</text>
+      </view>
+      <view class="msg">
+        <text class="title">{{locale.orderinfo.people}}</text>
+        <text class="val">{{orderInfo.people}}</text>
+      </view>
+      <view class="msg">
+        <text class="title">{{locale.orderinfo.ordermemo}}</text>
+        <text class="val ordermemo">{{orderInfo.ordermemo || locale.orderinfo.nomemo}}</text>
+      </view>
+      <view class="msg" a:if="{{orderInfo.diningWay}}">
+        <text class="title">{{locale.orderinfo.diningWay}}</text>
+        <text class="val">{{orderInfo.diningWay == 1 ? locale.orderinfo.diningWay_1 : locale.orderinfo.diningWay_2 }}</text>
+      </view>
+       <view class="msg" a:if="{{orderInfo.timeToShop}}">
+        <text class="title">{{locale.orderinfo.timeToShop}}</text>
+        <text class="val">{{orderInfo.timeToShop}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 订单菜品信息  -->
+  <view class="order-dishes">
+    <!-- <block wx:for="{{orderInfo.dishes}}" wx:key="{{index}}">
+      <OrderDish 
+      from="2"
+      data="{{item}}" 
+      currency="{{locale.orderinfo.currency}}" 
+      index="{{index}}" 
+      key="{{orderInfo.dishes.length - 1}}" />
+    </block> -->
+  </view>
+  <!-- 查看所有菜品开关 -->
+  <view a:if="{{orderInfo.dishesPrev.length}}" class="show_more" bindtap="showMore">
+    <view class="con" a:if="{{!showMore}}">
+      <text class="msg">{{locale.orderinfo.show_more}}</text>
+      <view class="icon"></view>
+    </view>
+    <view class="con nomore" a:if="{{showMore}">
+      <view class="icon"></view>
+      <text class="msg">{{locale.orderinfo.show_no_more}}</text>
+    </view> 
+  </view>
+  <!--价格分析详情  -->
+  <view class="total_price" a:if="{{false}}">
+    <view class="left">{{locale.orderinfo.total_price}}</view>
+    <view class="right"><text class="cur"></text>{{locale.orderinfo.currency}}{{limit_decimal.show(orderInfo.cost, 2)}}</view>
+  </view>
+  <!--订单信息  -->
+  <view class="ordermsg">
+    <view class="msg-item">
+      <text class="title">{{locale.orderinfo.order_no}}</text>
+      <text class="val">{{orderInfo.order_id}}</text>
+    </view>
+    <view class="msg-item">
+      <text class="title">{{locale.orderinfo.order_time}}</text>
+      <text class="val">{{orderInfo.add_time}}</text>
+    </view>
+  </view>
+  
+  <view class="ordermsg order-price border_bottom">
+    <view class="msg-item price">
+      <text class="title">{{locale.orderinfo.pay_price}}</text>
+      <text class="val red">{{locale.orderinfo.currency}}{{limit_decimal.show(orderInfo.total, 2)}}</text>
+    </view>
+    <block a:if="{{orderInfo.vipPrice && orderInfo.vipPrice != orderInfo.cost}}">
+      <!-- 储值支付金额/微信支付金额  -->
+      <view class="msg-item">
+        <text class="title">{{locale.orderinfo.order_vipPrice}}</text>
+        <text class="val red">{{locale.orderinfo.currency}}{{limit_decimal.show(orderInfo.vipPrice, 2)}}</text>
+      </view>
+      <view class="msg-item">
+        <text class="title">{{locale.orderinfo.order_originalCost}}</text>
+        <text class="val red">{{locale.orderinfo.currency}}{{limit_decimal.show(orderInfo.cost, 2)}}</text>
+      </view>
+    </block>
+    <block a:if="{{orderInfo.isMember == 1 && !orderInfo.vipPrice}}">
+      <view class="msg-item">
+        <text class="title">{{locale.orderinfo.member_price}}</text>
+        <text class="val red">{{locale.orderinfo.currency}}{{limit_decimal.show(orderInfo.memberpriceTotal, 2)}}</text>
+      </view>
+    </block>
+    <block a:for="{{orderInfo.discounts}}" a:key="{{index}}">
+      <view class="msg-item">
+        <text class="title">{{item.title}}</text>
+        <text class="val red">{{navigate}}{{limit_decimal.show(item.money, 2)}}</text>
+      </view>
+    </block>
+    <block a:if="{{orderInfo.pay_status == 2}}">
+      <view class="msg-item" a:if="{{orderInfo.wlife_pay_info.sub_credit_money}}">
+        <text class="title">{{locale.orderinfo.credit_price}}</text>
+        <text class="val red">{{navigate}}{{limit_decimal.show(orderInfo.wlife_pay_info.sub_credit_money, 2)}}</text>
+      </view>
+      <view class="msg-item" a:if="{{orderInfo.wlife_pay_info.sub_balance}}">
+        <text class="title">{{locale.orderinfo.balance_price}}</text>
+        <text class="val red">{{navigate}}{{limit_decimal.show(orderInfo.wlife_pay_info.sub_balance, 2)}}</text>
+      </view>
+      <view class="msg-item" a:if="{{orderInfo.wlife_pay_info.sub_coupons}}">
+        <text class="title">{{locale.orderinfo.coupon_price}}</text>
+        <text class="val red">{{navigate}}{{limit_decimal.show(orderInfo.wlife_pay_info.sub_coupons, 2)}}</text>
+      </view>
+      <view class="msg-item">
+        <text class="title">{{locale.orderinfo.wxpay}}</text>
+        <text class="val red">{{navigate}}{{limit_decimal.show(orderInfo.wlife_pay_info.payment_amount, 2)}}</text>
+      </view>
+    </block>
+  </view>
+  
+  <view class='fixed_bottom' a:if="{{!hideBtn}}">
+    <!-- <button 
+    wx:if="{{orderInfo.pay_status == 2 && orderInfo.status == 2 && orderInfo.invoice_url}}" 
+    class="invoice" 
+    bindtap='toInvoice'>{{locale.orderinfo.toinvoice}}</button> -->
+    <!-- 已支付 已下单 已完成 继续点餐 先付去首页，后付去扫码-->
+    <button a:if="{{orderInfo.pay_status == 2 && orderInfo.status == 2}}" 
+    class="invoice" 
+    bindtap='continuedc'>{{locale.orderinfo.continuedc}}</button>
+    <!-- 先付 未支付 已下单 取消订单-->
+    <button 
+    a:if="{{orderInfo.source !=5 && orderInfo.pay_status == 1 && orderInfo.ordermode == 2 && orderInfo.status == 2}}" 
+    class="invoice" 
+    bindtap='cancelOrder'>{{locale.orderinfo.cancelorder}}</button>
+    <!-- 后付 未支付 已下单 或者 等待审核 加菜-->
+    <button 
+    a:if="{{!hideAddDishes  && orderInfo.pay_status == 1 && orderInfo.ordermode == 3 && (orderInfo.status == 2 || orderInfo.status == 3)}}" 
+    class="invoice" 
+    bindtap='addish'>{{locale.orderinfo.adddish}}</button>
+    <!-- 先付或后付 未支付 下单失败 继续点餐 先付去首页，后付去扫码-->
+    <button 
+    a:if="{{orderInfo.pay_status == 1 && orderInfo.status > 3}}" 
+    class="invoice" 
+    bindtap='continuedc'>{{locale.orderinfo.continuedc}}</button>
+    <!-- 已退款 支付失败 -->
+    <button 
+      a:if="{{orderInfo.pay_status > 2}}" 
+      size="mini" class="invoice" type="primary" bindtap='continuedc'>{{locale.orderinfo.continuedc}}</button>
+      <!-- 未支付 已下单 等待审核  去支付 -->
+    <button 
+    a:if="{{orderInfo.pay_status == 1 && orderInfo.status == 2 || orderInfo.status == 3}}" 
+    size="mini" class="pay" type="primary" bindtap='topay'>{{locale.orderinfo.topay}}</button>
+  </view>
+</view>

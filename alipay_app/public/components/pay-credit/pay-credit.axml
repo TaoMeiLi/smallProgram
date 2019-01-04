@@ -1,0 +1,13 @@
+ <view class="pay-credit-component">
+  <view class="weui-cell weui-cell_switch {{couponsLength ? 'topborder' : ''}}">
+    <view class="weui-cell__bd">      {{locale.pay.credit}}      
+      <text class="desc">{{credit_tip}}
+      </text>
+    </view>
+    <view class="weui-cell__ft">
+      <text class="subtrack" a:if="{{isChecked}}">{{subtrackMoney}}
+      </text>
+      <switch color="#FD4E3C" onChange="switchChange" checked='{{isChecked}}'/>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "支付",
+  "usingComponents": {
+    "pay-card": "/components/pay-card/pay-card",
+    "pay-coupon": "/components/pay-coupon/pay-coupon",
+    "pay-credit": "/components/pay-credit/pay-credit",
+    "pay-prepaid": "/components/pay-prepaid/pay-prepaid",
+    "pay-ali": "/components/pay-ali/pay-ali",
+    "modal": "/components/modal/modal"
+  }
+}
