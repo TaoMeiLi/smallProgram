@@ -1,0 +1,30 @@
+<!--miniprogram/pages/cloudIndex/cloudIndex.wxml-->
+<view class="cloud_index">
+  <view class="con">
+    <!-- <UserinfoComponent /> -->
+  </view>
+  <view class="list">
+    <swiper
+      indicator-dots="{{true}}"
+      autoplay="{{false}}"
+      interval="{{false}}"
+      duration="500">
+      <block wx:for="{{flagList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class="flaglist">
+            <image src="./../../images/bg/1.jpeg" class="slide-image" width="355" height="150" />
+            <view class="title">2019年，加油</view>
+            <view class="flag_text">{{item.flag}}</view>
+            <view class="info">{{item.name}}({{item.gender}}/{{item.age}})</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="btns">
+    <view class="btn add" bindtap="add">增</view>
+    <view class="btn delete" bindtap="delete">删</view>
+    <view class="btn modify" bindtap="modify">改</view>
+    <view class="btn query" bindtap="query">查</view>
+  </view>
+</view>

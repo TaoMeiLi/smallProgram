@@ -1,0 +1,6 @@
+<!--miniprogram/pages/todo/todo.wxml-->
+<view class="todo-page">
+  <view class="lists" wx:for="{{list}}" wx:key="{{index}}">
+    <navigator class="nav_url" url="{{item.url}}">{{item.label}}</navigator>
+  </view>
+</view>

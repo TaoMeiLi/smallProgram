@@ -1,0 +1,15 @@
+/* miniprogram/pages/todo/todo.wxss */
+.todo-page{
+  width: 100%;
+  border-bottom:1rpx solid #eee;
+}
+.lists{
+  width:100%;
+  line-height: 70rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  border-top:1rpx solid #eee;
+}
+.nav_url {
+  padding-left: 30rpx;
+}

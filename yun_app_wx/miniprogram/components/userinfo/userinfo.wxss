@@ -1,0 +1,24 @@
+/* components/userinfo/userinfo.wxss */
+.label {
+  font-size: 24rpx;
+  padding: 30rpx;
+  padding-bottom: 0;
+  display: flex;
+}
+.label text {
+  margin-right: 20rpx;
+  line-height: 60rpx;
+}
+.label input, .label textarea {
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 60rpx;
+  border: 1px solid #ddd;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+
+}
+.label textarea {
+  padding: 20rpx;
+}

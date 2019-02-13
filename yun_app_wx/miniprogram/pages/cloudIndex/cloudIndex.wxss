@@ -1,0 +1,11 @@
+/* miniprogram/pages/cloudIndex/cloudIndex.wxss */
+
+.btn {
+  text-align: center;
+  width: 100rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  border:1rpx solid #ddd;
+  border-radius: 40rpx;
+  font-size: 24rpx;
+}

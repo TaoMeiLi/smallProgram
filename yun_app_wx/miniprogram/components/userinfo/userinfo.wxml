@@ -1,0 +1,23 @@
+<!--components/userinfo/userinfo.wxml-->
+<view class="userinfo-component">
+  <view class="label">
+    <text>姓名:</text>
+    <input type="text" value="{{name}}" />
+  </view>
+  <view class="label">
+    <text>性别:</text>
+    <input type="text" value="{{gender}}" />
+  </view>
+  <view class="label">
+    <text>年龄:</text>
+    <input type="text" value="{{age}}" />
+  </view>
+  <view class="label">
+    <text>电话:</text>
+    <input type="text" value="{{tel}}" />
+  </view>
+  <view class="label">
+    <text>2019你的flag:</text>
+    <view><textarea name="myflag" id="" cols="30" rows="10">{{flag}}</textarea></view>
+  </view>
+</view>
