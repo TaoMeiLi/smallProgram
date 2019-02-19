@@ -29,6 +29,7 @@ module.exports = (app, prefix) => {
 			errcode: 0, //random(0, 1),
 			errmsg: '很抱歉发生了某些错误',
 			result: {
+				type:1,
 				weapp_pagetitle: "微生活(奥林匹克公园站)",
 				head_swiper: [ //活动轮播图
 					{

@@ -51,7 +51,7 @@ const loginApp = (app, paramsWithCode, callback) => request(
 
 
 //业务请求：获得首页数据
-const getIndex = (data, callback) => _chkSessionAndRequest('GET', `${mock_prefix}/index`, {...data}, callback);
+const getIndex = (data, callback) => request('GET', `${mock_prefix}/index`, {...data}, callback);
 
 
 module.exports = {

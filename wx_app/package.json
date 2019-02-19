@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./dev.js",
     "reset": "node ./dev.js --reset",
-    "local": "./run.superapp.sh",
+    "local": "npm run reset && npm start",
     "beta": "node ./dev.js --reset beta",
     "pre": "node ./dev.js --reset pre",
     "pro": "node ./dev.js --reset pro",
