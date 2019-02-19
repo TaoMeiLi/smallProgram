@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>shangcheng</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="79.4229126%" y1="16.7780635%" x2="34.6199957%" y2="96.6399845%" id="linearGradient-1">
+            <stop stop-color="#FFB33A" offset="0%"></stop>
+            <stop stop-color="#FF7836" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="750-copy-4" transform="translate(-419.000000, -590.000000)">
+            <g id="icon50-3" transform="translate(419.000000, 590.000000)">
+                <g>
+                    <circle id="Oval-Copy-2" fill="url(#linearGradient-1)" cx="50" cy="50" r="50"></circle>
+                    <path d="M26,31 L28.24811,30.889097 C31.5577937,30.7258248 34.3731808,33.2764952 34.536453,36.5861789 C34.5413106,36.6846476 34.5437405,36.783221 34.5437405,36.8818094 L34.5437405,57.5179055 C34.5437405,60.831614 37.230032,63.5179055 40.5437405,63.5179055 L72,63.5179055" id="Path-2" stroke="#FFFFFF" stroke-width="3"></path>
+                    <polyline id="Path-3" stroke="#FFFFFF" stroke-width="3" points="35.7233648 37.504534 70.5203626 37.504534 70.5203626 55.4937715 42.018526 55.4937715"></polyline>
+                    <circle id="Oval-2" fill="#FFFFFF" cx="43" cy="72" r="3"></circle>
+                    <circle id="Oval-2-Copy" fill="#FFFFFF" cx="63" cy="72" r="3"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

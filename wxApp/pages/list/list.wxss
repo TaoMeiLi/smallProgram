@@ -1,0 +1,20 @@
+/* pages/list/list.wxss */
+.list-page {
+  padding-top: 128rpx;
+}
+.list {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  color: #aaa;
+  padding-left: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.lists :nth-child(2n){
+  background: #eee;
+}
+
+.active {
+  color: red;
+}

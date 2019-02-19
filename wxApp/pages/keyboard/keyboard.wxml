@@ -1,0 +1,19 @@
+<!--pages/keyboard/keyboard.wxml-->
+<view class="keyboard-page">
+  <block wx:for="{{data}}" wx:key="{{item.inputtype}}">
+    <input 
+      type="{{item.inputtype}}" 
+      value="" 
+      data-type="{{item.inputtype}}" 
+      placeholder="{{item.name}}" 
+      bindfocus="bindInputFocus"
+      bindblur="bindInputBlur">
+    </input>
+  </block>
+</view>
+
+<view class="comfirmbtn-modal" style="bottom:{{keyboardH}}rpx;" wx:if="{{showKeyboard && inputType != 'text'}}">
+  <ComfirmBtn 
+    yesText="确认"
+    cancelText="取消" />
+</view>

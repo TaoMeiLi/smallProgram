@@ -1,0 +1,11 @@
+<!--pages/getPhone/getPhone.wxml-->
+<Navigaton title="获取手机号码" />
+<view class="getPhone_page">
+  <button 
+    class="get_tel"
+    open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber" >
+    获取手机号
+  </button>
+  <view>不支持个人开发者</view>
+</view>

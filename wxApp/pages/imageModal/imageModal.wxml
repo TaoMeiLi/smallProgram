@@ -1,0 +1,6 @@
+<!--pages/imageModal/imageModal.wxml-->
+<view class="imagemodal_page">
+  <view class="image_box">
+    <image mode="scaleToFill" src="../../image/23.jpg"></image>
+  </view>
+</view>

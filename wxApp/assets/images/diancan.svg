@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>diancan</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="75.0339869%" y1="8.77653774%" x2="38.0510492%" y2="92.9290467%" id="linearGradient-1">
+            <stop stop-color="#FEDE48" offset="0%"></stop>
+            <stop stop-color="#FFA340" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="750-copy-4" transform="translate(-232.000000, -590.000000)">
+            <g id="icon50-2" transform="translate(232.000000, 590.000000)">
+                <g>
+                    <circle id="Oval-Copy-2" fill="url(#linearGradient-1)" cx="50" cy="50" r="50"></circle>
+                    <circle id="Oval" stroke="#FFFFFF" stroke-width="3" cx="51" cy="32" r="3"></circle>
+                    <path d="M26.9210375,65.5 L75.0789625,65.5 C75.5231336,63.6327013 75.75,61.7070216 75.75,59.75 C75.75,46.0809524 64.6690476,35 51,35 C37.3309524,35 26.25,46.0809524 26.25,59.75 C26.25,61.7070216 26.4768664,63.6327013 26.9210379,65.5000004 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="3"></path>
+                    <path d="M22.5,58.5 L79.5,58.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

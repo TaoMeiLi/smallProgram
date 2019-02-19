@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="45px" viewBox="0 0 46 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Count-foods" transform="translate(-15.000000, -1.000000)">
+            <g id="Group" transform="translate(14.000000, 0.000000)">
+                <path d="M23.562528,1.99634367 C11.652206,1.99634367 2.000032,11.5792485 2.000032,23.3970319 C2.000032,35.2143907 11.6524386,44.7977202 23.562528,44.7977202 C35.4725765,44.7977202 45.124976,35.2143837 45.124976,23.3970319 C45.124976,11.5792556 35.4728091,1.99634367 23.562528,1.99634367 Z" id="椭圆-1071-拷贝" stroke="#D3D3D3" stroke-width="2"></path>
+                <polygon id="Rectangle-4" fill="#D8D8D8" points="17 22 32 22 32 25 17 25"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<!--pages/list/list.wxml-->
+<view class="list-component">
+  <view class="top1" bindtap="bindTop1" style="opacity:{{opacity}}">{{shopName}}</view>
+  <view class="top2">
+    微生活*{{shopName}}
+  </view>
+  <view class="searchbar">
+    <input class="search-input"
+      placeholder="搜索" 
+      disabled="true" />
+  </view>
+  <view>
+    <block wx:for="{{images}}" wx:key="{{key}}">
+      <image src="{{item}}"></image>
+    </block>
+  </view>
+</view>

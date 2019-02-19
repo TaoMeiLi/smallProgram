@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>paihao</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="81.6652591%" y1="11.6068126%" x2="41.677372%" y2="90.5037143%" id="linearGradient-1">
+            <stop stop-color="#FD7944" offset="0%"></stop>
+            <stop stop-color="#FC3E39" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="750-copy-4" transform="translate(-44.000000, -590.000000)">
+            <g id="icon50-1" transform="translate(44.000000, 590.000000)">
+                <g>
+                    <circle id="Oval" fill="url(#linearGradient-1)" cx="50" cy="50" r="50"></circle>
+                    <path d="M29,50 C29,62.1502645 38.8497355,72 51,72 C63.1502645,72 73,62.1502645 73,50 C73,37.8497355 63.1502645,28 51,28" id="Oval-3" stroke="#FFFFFF" stroke-width="3"></path>
+                    <path d="M51,28 C38.8497355,28 29,37.8497355 29,50" id="Oval-3" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6"></path>
+                    <polyline id="Path-8" stroke="#FFFFFF" stroke-width="3" points="50.0434783 37.5652174 50.0434783 49.9936874 58.6521739 56.6956522"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

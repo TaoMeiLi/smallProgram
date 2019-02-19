@@ -1,0 +1,5 @@
+<!--components/navigaton/navigaton.wxml-->
+<view class="navigaton-component">
+  <view class="title">{{title}}</view>
+  <view wx:if="{{isback}}" class="back_btn" bindtap="backBtn">{{backImg}}</view>
+</view>

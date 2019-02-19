@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/keyboard/keyboard",
+    "pages/swipers/swipers",
+    "pages/navigationBar/navigationBar",
+    "pages/list/list",
+    "pages/imageModal/imageModal",
+    "pages/canvas/canvas",
+    "pages/getPhone/getPhone"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FD6D42",
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ddd",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 20,
+    "navigationStyle": "custom"
+  },
+  "networkTimeout": {},
+  "debug": true
+}

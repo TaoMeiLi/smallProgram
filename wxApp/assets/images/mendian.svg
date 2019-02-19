@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>mendian</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="43.5589234%" y1="100%" x2="73.3680552%" y2="7.30623953%" id="linearGradient-1">
+            <stop stop-color="#292E37" offset="0%"></stop>
+            <stop stop-color="#535F72" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="750-copy-4" transform="translate(-606.000000, -590.000000)">
+            <g id="icon50-4" transform="translate(606.000000, 590.000000)">
+                <g>
+                    <circle id="Oval-Copy-3" fill="url(#linearGradient-1)" opacity="0.900000036" cx="50" cy="50" r="50"></circle>
+                    <polyline id="Path-5" stroke="#FFFFFF" stroke-width="3" points="32.5832617 70 32.5832617 46 51.0526316 28 69.5516536 46 69.5516536 70"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

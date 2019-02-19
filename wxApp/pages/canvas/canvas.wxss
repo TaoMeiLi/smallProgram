@@ -1,0 +1,8 @@
+/* pages/canvas/canvas.wxss */
+.navigaton {
+  height: 128rpx;
+}
+.first_canvas {
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}

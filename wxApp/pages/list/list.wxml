@@ -1,0 +1,9 @@
+<!--pages/list/list.wxml-->
+<view class="list-page">
+  <Navigaton title="门店列表页"></Navigaton>
+  <view class="lists">
+    <block wx:for="{{list}}" wx:key="{{item}}">
+      <view class="list {{shopId == item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="checkShop">{{item.name}}</view>
+    </block>
+  </view>
+</view>

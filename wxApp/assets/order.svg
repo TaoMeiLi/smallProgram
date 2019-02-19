@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="44px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Order-list" transform="translate(2.000000, 2.000000)" stroke="#FFFFFF">
+            <g id="Group-2">
+                <path d="M12.0838013,30.9602661 C12.0838013,30.9602661 12.0838013,27.9717 12.0838013,21.9945679 L0.995361328,21.9945679 L0.995361328,4.00531006 C0.995361328,1.79617106 2.78622233,0.00531005859 4.99536133,0.00531005859 L31.0093384,0.00531005859 C33.2184774,0.00531005859 35.0093384,1.79617106 35.0093384,4.00531006 L35.0093384,35.9915161 C35.0093384,38.2006551 33.2184774,39.9915161 31.0093384,39.9915161 L4.99536133,39.9915161 C2.78622233,39.9915161 0.995361328,38.2006551 0.995361328,35.9915161 L0.995361328,28.0089111" id="Path-4" stroke-width="4"></path>
+                <path d="M9,9 L27,9" id="Line" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M9,16 L27,16" id="Line-Copy" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "usingComponents" : {
+    "Navigaton": "../../components/navigaton/navigaton"
+  },
+  "enablePullDownRefresh": true
+}

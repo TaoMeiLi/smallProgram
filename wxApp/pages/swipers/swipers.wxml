@@ -1,0 +1,17 @@
+<view class="swiper-page">
+  <Navigaton title="地图"></Navigaton>
+  <swiper 
+    class='swiperClass'
+    previous-margin="104rpx" 
+    next-margin="104rpx" 
+    bindchange="bindchange" 
+    style='height: {{swiperHeight}}rpx'>
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <view class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" style="background:{{item}}"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+

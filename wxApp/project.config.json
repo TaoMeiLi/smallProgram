@@ -1,0 +1,77 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.2",
+	"appid": "wxd73abc47832e3958",
+	"projectname": "wxApp",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": 0,
+					"name": "keyboard",
+					"pathName": "pages/keyboard/keyboard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "swiper",
+					"pathName": "pages/swipers/swipers",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "navigationBar",
+					"pathName": "pages/navigationBar/navigationBar",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": "shopId=3"
+				},
+				{
+					"id": -1,
+					"name": "imageModal",
+					"pathName": "pages/imageModal/imageModal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "getPhone",
+					"pathName": "pages/getPhone/getPhone"
+				}
+			]
+		}
+	}
+}

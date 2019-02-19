@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Navigaton": "../../components/navigaton/navigaton"
+  }
+}

@@ -1,0 +1,25 @@
+
+
+<svg width="56px" height="32px" viewBox="0 0 56 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#E2CACB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+            <stop stop-color="#FFFFFF" offset="200%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Floating-menu-open" transform="translate(-592.000000, -323.000000)" fill="url(#linearGradient-1)">
+            <g id="bar" transform="translate(5.000000, 16.000000)">
+                <g id="组-8" transform="translate(561.000000, 275.000000)">
+                    <g id="组-9" transform="translate(25.000000, 31.000000)">
+                        <polygon id="矩形-10" points="1.00005 30.000194 57.000018 30.000194 57.000018 33.000356 1.00005 33.000356"></polygon>
+                        <path d="M27.000039,4.0818817 L27.000039,2.999354 C27.000039,1.895063 27.895446,1.000239 29.000004,1.000239 C30.104613,1.000239 31.00002,1.895063 31.00002,2.999354 L31.00002,4.08188658 C43.3190799,5.09819359 52.999941,15.4184062 52.999941,28.00008 L4.999914,28.00008 C4.999914,15.418386 14.680898,5.09816055 27.000039,4.0818817 Z" id="Combined-shape-592"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

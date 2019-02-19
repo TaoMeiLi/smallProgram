@@ -1,0 +1,4 @@
+/* pages/getPhone/getPhone.wxss */
+.getPhone_page {
+  padding-top:128rpx;
+}

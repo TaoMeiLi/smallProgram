@@ -1,0 +1,23 @@
+<!--pages/map/map.wxml-->
+<view class="map-conponent">
+  <Navigaton title="地图" isback="false"></Navigaton>
+  <view class="header">定位</view>
+  <view class="map-box">
+    <map
+      class="my-map"
+      id="myMap"
+      longitude="{{myLongitude}}"
+      latitude="{{myLatitude}}"
+      scale="{{scale}}"
+      markers="{{markers}}"
+      show-location="{{showLocation}}"
+      bindmarkertap="markerTap"
+      bindcallouttap="callOutTap"
+      bindcontroltap="controlTap"
+      bindregionchange="regionChange"
+      bindtap="tapMap"
+      bindupdated="mapUpdated"
+      ></map>
+  </view>
+  <view class="shops">列表</view>
+</view>

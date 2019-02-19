@@ -1,0 +1,5 @@
+<!--components/confirmBtn/confirmBtn.wxml-->
+<view class='confirmbtn-component' >
+  <view class="btn cancel-btn">{{cancelText}}</view>
+  <view class="btn yes-btn">{{yesText}}</view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "键盘",
+  "usingComponents": {
+    "ComfirmBtn": "../../components/confirmBtn/confirmBtn"
+  }
+}

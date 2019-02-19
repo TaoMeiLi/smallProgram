@@ -1,0 +1,23 @@
+/* components/navigaton/navigaton.wxss */
+.navigaton-component {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 128rpx;
+  background-color: #FF6D55;
+}
+.title {
+  font-size: 28rpx;
+  text-align: center;
+  background:#FF6D55;
+  color: #fff;
+  padding-top:64rpx;
+}
+.back_btn {
+  position: absolute;
+  top:64rpx;
+  left: 20rpx;
+  color: #fff;
+  line-height: 36rpx;
+}
