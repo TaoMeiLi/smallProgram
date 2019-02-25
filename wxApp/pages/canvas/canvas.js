@@ -1,66 +1,43 @@
 // pages/canvas/canvas.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onLoad() {
 
   },
+  onReady(){
+    const context = wx.createCanvasContext('firstCanvas');
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    context.arc(50, 50, 10, 0, 2 * Math.PI, false)
+    context.moveTo(10,10)
+    context.arcTo(70, 170, 20, 170, 110)
+    
+    context.rect()
+    context.setFillStyle('#eeeeee')
+    context.fill()
 
-  },
+    context.beginPath()
+    context.moveTo(20,15)
+    context.bezierCurveTo(10,100,200,100,200,30);
+    context.setFillStyle('#fac');
+    context.stroke()
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+    context.clearRect(0,0,100,100)
 
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+    // wx.downloadFile({
+    //   url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
+    //   success(res) {
+    //     context.save()
+    //     context.beginPath()
+    //     context.arc(50, 50, 25, 0, 2 * Math.PI)
+    //     context.clip()
+    //     context.drawImage(res.tempFilePath, 25, 25)
+    //     context.restore()
+    //     context.draw()
+    //   }
+    // })
+    context.draw()
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
