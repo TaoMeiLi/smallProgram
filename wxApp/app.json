@@ -8,7 +8,8 @@
     "pages/list/list",
     "pages/imageModal/imageModal",
     "pages/canvas/canvas",
-    "pages/getPhone/getPhone"
+    "pages/getPhone/getPhone",
+    "pages/setCoupon/setCoupon"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FD6D42",
@@ -21,5 +22,11 @@
     "navigationStyle": "custom"
   },
   "networkTimeout": {},
-  "debug": true
+  "debug": true,
+  "plugins": {
+    "coupon-plugin": {
+      "version": "1",
+      "provider": "wx8e98654a3e2f42f7"
+    }
+  }
 }

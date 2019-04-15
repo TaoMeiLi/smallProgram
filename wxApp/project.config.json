@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -69,7 +69,14 @@
 				{
 					"id": -1,
 					"name": "getPhone",
-					"pathName": "pages/getPhone/getPhone"
+					"pathName": "pages/getPhone/getPhone",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠券插件",
+					"pathName": "pages/setCoupon/setCoupon",
+					"scene": null
 				}
 			]
 		}
